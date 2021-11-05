@@ -5,37 +5,40 @@ import java.util.List;
 import java.util.*;
 /**
  * AUFGABE 2: 1,2,3,4
+ * Find min,max from array
+ * Find min sum from n-1 numbers
+ * Find max sum from n-1 numbers
  */
 public class ArrayMaxMin {
 
 
     public static void main(String[] args) {
 
-        //max
-        Integer a[] = {4, 8, 3, 10, 17};
-        int max = Collections.max(Arrays.asList(a));
 
-        //min
-        int min = Collections.min(Arrays.asList(a));
+        Integer integers[] = {4, 8, 3, 10, 17};
+        int max = Collections.max(Arrays.asList(integers));
 
-        //maxS n-1
-        Arrays.sort(a);
+
+        int min = Collections.min(Arrays.asList(integers));
+
+
+        Arrays.sort(integers);
 
         int maxS=0;
-        String sorted = Arrays.toString(a);
+        String sorted = Arrays.toString(integers);
         System.out.println("sorted array: " + sorted);
 
-        for (int i=1;i<a.length;i++){
-            maxS=maxS+a[i];
-            //System.out.println(i);
-        }
-        //System.out.println(maxS);
+        for (int i=1;i<integers.length;i++){
+            maxS=maxS+integers[i];
 
-        //minS n-1
+        }
+
+
+
         int minS=0;
-        for (int j = 0;j<a.length-1;j++){
-            minS=minS+a[j];
-            //System.out.println(j);
+        for (int j = 0;j<integers.length-1;j++){
+            minS=minS+integers[j];
+
         }
 
 

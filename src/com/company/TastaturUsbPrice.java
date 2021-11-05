@@ -10,6 +10,11 @@ public class TastaturUsbPrice {
     int min=tastaturPrice[0];
     int max=tastaturPrice[0];
 
+    /**
+     * Find cheapest keyboard
+     * @param tastaturPrice
+     * @return
+     */
     public int billig(int [] tastaturPrice){
 
         for(int i=1;i<n;i++){
@@ -20,6 +25,12 @@ public class TastaturUsbPrice {
         return min;
     }
 
+    /**
+     * Find most expensive keyboard
+     * @param tastaturPrice
+     * @param usbPrice
+     * @return
+     */
     public int teuer(int [] tastaturPrice, int[] usbPrice){
 
         for(int i=1;i<n;i++){
@@ -37,6 +48,11 @@ public class TastaturUsbPrice {
         return max;
     }
 
+    /**
+     * Find a drive for a budget
+     * @param tastaturPrice
+     * @return
+     */
     public int budget(int [] tastaturPrice){
         int b=60;
         int t;
@@ -59,6 +75,12 @@ public class TastaturUsbPrice {
         return r;
     }
 
+    /**
+     * Find 1 keyboard and 1 usb for a specific budget
+     * @param tastaturPrice
+     * @param usbPrice
+     * @return
+     */
     public int geldbetrag(int []tastaturPrice, int[]usbPrice){
 
         int rez=0;

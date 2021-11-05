@@ -6,17 +6,29 @@ public class Note {
     private int[] badNotes;
     private int[] abgerundeteNote;
 
-    //Getter
+    /**
+     * getter note
+     * @return note
+     */
     public int[] getNote() {
         return this.note;
     }
 
-    //Setter
+
+    /**
+     * setter nite
+     * @param note
+     */
     public void setNote(int[] note) {
         this.note = note;
     }
 
-    //Round aufgabe1.Note
+
+    /**
+     * Regeln noten
+     * @param note
+     * @return note
+     */
     public int roundNote(int note) {
         if(note >=38) {
             if (((int) (note / 5)*5 + 5) - note < 3) {
@@ -26,14 +38,19 @@ public class Note {
         return note;
     }
 
-    //Round all notes
+    /**
+     * Round all notes
+     */
     public void roundNotes(){
         for(int i = 0; i < this.note.length; i++){
             this.note[i]= roundNote(this.note[i]);
         }
     }
 
-    //Return all bad notes
+    /**
+     * Find all bad notes
+     * @return badNotes
+     */
     public int[] badNotes(){
         int j = 0;
         for(int i = 0; i < this.note.length; i++){
@@ -55,7 +72,11 @@ public class Note {
         return this.badNotes;
     }
 
-    //Average aufgabe1.Note
+
+    /**
+     * Calculate average note
+     * @return  note
+     */
     public double averageNote(){
         double avg=0;
         for(int i =0; i < this.note.length; i++){
@@ -64,7 +85,10 @@ public class Note {
         return avg/this.note.length;
     }
 
-    //Abgerundete aufgabe1.Note Array
+    /**
+     * Find rounded notes
+     * @return
+     */
     public int[] abgerundeteNote(){
         int j = 0;
         for(int i = 0; i < this.note.length; i++){
@@ -83,7 +107,11 @@ public class Note {
         return this.abgerundeteNote;
     }
 
-    //Max aufgabe1.Note
+    /**
+     * Find max note
+     * @param arr
+     * @return max
+     */
     public int maxNote(int[] arr){
         int max = 0;
         for( int i = 0; i < arr.length; i++){
